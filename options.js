@@ -1,3 +1,5 @@
+const miniAppUrl = "https://telegram-mini-app-beta-one.vercel.app/";
+
 module.exports = {
     testOptions: {
         reply_markup: JSON.stringify({
@@ -27,6 +29,19 @@ module.exports = {
       againOptions: {
         reply_markup: JSON.stringify({
           inline_keyboard: [[{ text: "Играть еще раз", callback_data: "/again" }]],
+        }),
+      },
+      
+      options: {
+        reply_markup: JSON.stringify({
+          inline_keyboard: [
+            [
+              {
+                text: "Открыть Mini App",
+                web_app: { url: miniAppUrl },
+              },
+            ],
+          ],
         }),
       }
       
